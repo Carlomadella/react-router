@@ -2,6 +2,8 @@ import React from "react";
 import MainNavbar from "../components/MainNavbar";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
+import SingleProduct from "./SingleProduct";
 
 const ProductsPage = () => {
 
@@ -26,14 +28,16 @@ const ProductsPage = () => {
                     {products.map((product) => (
                         <div key={product.id} className="col-12 col-md-6 col-lg-4">
                             <div className="card">
-                                <div className="card-image-top">
+                                <NavLink to={`/products/${product.id}`}>
+                                    <div className="card-image-top">
                                     <img src={product.image} alt={product.title} className="img-fluid"/>
-                                </div>
-                                <div className="card-body">
-                                    <h3>{product.title}</h3>
-                                    <p>{product.category}</p>
-                                    <p>{product.price}euro</p>
-                                </div>
+                                    </div>
+                                    <div className="card-body">
+                                        <h3>{product.title}</h3>
+                                        <p>{product.category}</p>
+                                        <p>{product.price}euro</p>
+                                    </div>
+                                </NavLink>
                             </div>
                         </div>   
                     ))}
