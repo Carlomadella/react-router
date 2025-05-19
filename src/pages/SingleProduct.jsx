@@ -18,6 +18,10 @@ const SingleProduct = () => {
     useEffect(() => {
         getProductDetail();
     }, []);
+
+    if (!product) {
+        return <p>Loading...</p>;
+    }
     
     return(
         <div className="container">
