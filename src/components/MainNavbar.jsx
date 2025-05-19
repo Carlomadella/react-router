@@ -22,7 +22,7 @@ const MainNavbar = () => {
             <nav>
                 <ul className="list-unstyled d-flex">
                     {links.map((link,index) =>(
-                        <li key={index}>
+                        <li className="list-item" key={index}>
                             <NavLink to={link.path}>{link.label}</NavLink>
                         </li>
                     ))}
