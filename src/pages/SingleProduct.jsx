@@ -14,6 +14,10 @@ const SingleProduct = () => {
             setProduct(resp.data)
         })
     };
+
+    useEffect(() => {
+        getProductDetail();
+    }, []);
     
     return(
         <div className="container">
