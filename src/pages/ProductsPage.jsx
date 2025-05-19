@@ -3,7 +3,7 @@ import MainNavbar from "../components/MainNavbar";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Products = () => {
+const ProductsPage = () => {
 
     const [products, setProducts] = useState([])
 
@@ -43,4 +43,4 @@ const Products = () => {
     )
 }
 
-export default Products
+export default ProductsPage
